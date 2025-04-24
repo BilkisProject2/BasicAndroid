@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,12 +14,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.AndroidPractice"
         tools:targetApi="31">
         <activity
-            android:name="BottomSheetAndWebview.Webview"
-            android:exported="true" >
+            android:name="CameraAndGalleryPart.Gallery"
+            android:exported="false" />
+        <activity
+            android:name="CameraAndGalleryPart.Camera"
+            android:exported="false" />
+        <activity
+            android:name="BottomSheetAndWebview.shareperfence"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,13 +32,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="BottomSheetAndWebview.Webview"
+            android:exported="true" />
+        <activity
             android:name="BottomSheetAndWebview.BottomSheet"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ModuleofTabAndBottomAndDrwable.navigatiodrawableexaml"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ModuleofTabAndBottomAndDrwable.bottomnav"
             android:exported="false" />
