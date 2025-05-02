@@ -1,6 +1,10 @@
 package CameraAndGalleryPart
 
+import android.app.Activity
+import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultCallback
@@ -17,15 +21,25 @@ class Gallery : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityGalleryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val resultcontract = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            if (it.resultCode==Activity.RESULT_OK){
+                val bitmap = it.data?.extras?.get("data") as Bitmap
+                binding.imageView11.setImageBitmap(bitmap)
+            }
 
+
+
+        }
         val loadimage = registerForActivityResult(ActivityResultContracts.GetContent(),
             ActivityResultCallback {
                 binding.imageView11.setImageURI(it)
             })
-
         binding.Gallerybtn.setOnClickListener (View.OnClickListener {
             loadimage.launch("image/*")
         })
-
+        binding.button7.setOnClickListener {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            resultcontract.launch(intent)
+        }
     }
 }
