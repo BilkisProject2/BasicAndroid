@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.androidpractice"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -28,11 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     buildFeatures {
         viewBinding = true
@@ -58,6 +58,9 @@ dependencies {
     implementation ("androidx.camera:camera-video:1.4.2")
     implementation ("androidx.camera:camera-view:1.4.2")
     implementation( "androidx.camera:camera-extensions:1.4.2")
+
+    //workmanger
+    implementation("androidx.work:work-runtime:2.10.1")
 
 
        //autosearch

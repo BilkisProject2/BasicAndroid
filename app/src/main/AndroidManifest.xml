@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
@@ -20,6 +25,17 @@
             android:value="@string/api_string"></meta-data>
 
         <activity
+            android:name="Pillerofandroid.Broadcastrecevicer"
+            android:exported="false" />
+        <activity
+            android:name="Pillerofandroid.WorkerManger"
+            android:exported="false" />
+        <activity
+            android:name="Pillerofandroid.Service"
+            android:exported="false" />
+        <activity
+            android:name="CameraAndGalleryPart.Gallery"
+            android:exported="true">
             android:name=".BottomSheetAndWebview.Map.Map"
             android:exported="true" >
             <intent-filter>
@@ -35,13 +51,10 @@
 
 
         <activity
-            android:name=".BottomSheetAndWebview.shareperfence"
-            android:exported="true"></activity>
-        <activity
-            android:name=".BottomSheetAndWebview.Webview"
+            android:name="BottomSheetAndWebview.Webview"
             android:exported="true" />
         <activity
-            android:name=".BottomSheetAndWebview.BottomSheet"
+            android:name="BottomSheetAndWebview.BottomSheet"
             android:exported="true" />
         <activity
             android:name=".ModuleofTabAndBottomAndDrwable.navigatiodrawableexaml"
@@ -65,6 +78,20 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name="Pillerofandroid.loggerservice"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <receiver android:name="Pillerofandroid.BroadcastRecevier"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
