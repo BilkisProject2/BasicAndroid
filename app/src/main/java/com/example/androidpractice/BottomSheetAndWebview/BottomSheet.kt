@@ -1,4 +1,4 @@
-package BottomSheetAndWebview
+package com.example.androidpractice.BottomSheetAndWebview
 
 import android.os.Bundle
 import android.view.LayoutInflater

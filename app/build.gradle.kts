@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -55,12 +56,11 @@ dependencies {
     implementation ("androidx.camera:camera-camera2:1.4.2")
     implementation ("androidx.camera:camera-lifecycle:1.4.2")
     implementation ("androidx.camera:camera-video:1.4.2")
-
     implementation ("androidx.camera:camera-view:1.4.2")
     implementation( "androidx.camera:camera-extensions:1.4.2")
 
 
-
-
-
+       //autosearch
+        implementation ("com.google.android.libraries.places:places:3.3.0")
+        implementation ("com.google.android.gms:play-services-maps:18.2.0")
 }

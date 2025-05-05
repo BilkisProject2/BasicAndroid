@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -15,27 +15,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPractice"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_string"></meta-data>
+
         <activity
-            android:name="CameraAndGalleryPart.Gallery"
+            android:name=".BottomSheetAndWebview.Map.Map"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="CameraAndGalleryPart.Camera"
-            android:exported="false" />
-        <activity
-            android:name="BottomSheetAndWebview.shareperfence"
+            android:name="CameraAndGalleryPart.Gallery"
             android:exported="true">
-
         </activity>
+
+
         <activity
-            android:name="BottomSheetAndWebview.Webview"
+            android:name=".BottomSheetAndWebview.shareperfence"
+            android:exported="true"></activity>
+        <activity
+            android:name=".BottomSheetAndWebview.Webview"
             android:exported="true" />
         <activity
-            android:name="BottomSheetAndWebview.BottomSheet"
+            android:name=".BottomSheetAndWebview.BottomSheet"
             android:exported="true" />
         <activity
             android:name=".ModuleofTabAndBottomAndDrwable.navigatiodrawableexaml"
