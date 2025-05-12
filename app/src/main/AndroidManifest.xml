@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
@@ -36,26 +35,18 @@
         <activity
             android:name="CameraAndGalleryPart.Gallery"
             android:exported="true">
-            android:name=".BottomSheetAndWebview.Map.Map"
-            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="CameraAndGalleryPart.Gallery"
-            android:exported="true">
-        </activity>
 
 
         <activity
             android:name="BottomSheetAndWebview.Webview"
             android:exported="true" />
-        <activity
-            android:name="BottomSheetAndWebview.BottomSheet"
-            android:exported="true" />
+
         <activity
             android:name=".ModuleofTabAndBottomAndDrwable.navigatiodrawableexaml"
             android:exported="true" />
