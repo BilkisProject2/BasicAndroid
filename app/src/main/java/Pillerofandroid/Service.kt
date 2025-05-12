@@ -30,13 +30,11 @@ class Service : AppCompatActivity() {
 //            startService(Intent(this,loggerservice::class.java))
             //for forground
             startForegroundService(Intent(this,loggerservice::class.java))
-
         }
 
         binding.endservice.setOnClickListener {
             //for bg and forground
             stopService(Intent(this,loggerservice::class.java))
-
         }
 
     }
