@@ -13,7 +13,6 @@ import com.example.androidpractice.R
 import java.util.concurrent.TimeUnit
 
 class WorkerManger : AppCompatActivity() {
-
     private val workmanger= WorkManager.getInstance(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +24,7 @@ class WorkerManger : AppCompatActivity() {
         val equets = OneTimeWorkRequest.Builder(workerclass::class.java)
 //        val equets = PeriodicWorkRequest.Builder(workerclass::class.java,15,TimeUnit.MINUTES)
             .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build())
-            .setBackoffCriteria(    BackoffPolicy.LINEAR,10,TimeUnit.SECONDS)
+            .setBackoffCriteria(BackoffPolicy.LINEAR,10,TimeUnit.SECONDS)
             .build()
         workmanger.enqueue(equets)
         workmanger.beginWith(equets).then(equets).enqueue()
