@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidpractice.R
-import model.adapterdc
+import com.example.androidpractice.model.adapterdc
 
 class RecAdapter(var item:ArrayList<adapterdc>):RecyclerView.Adapter<RecAdapter.Viewholder>() {
     lateinit var mlistner:onitemclicklistner
@@ -37,7 +37,7 @@ class RecAdapter(var item:ArrayList<adapterdc>):RecyclerView.Adapter<RecAdapter.
         notifyItemRemoved(position)
     }
 
-    fun editdata(position: Int, modeloflist:adapterdc){
+    fun editdata(position: Int, modeloflist: adapterdc){
         item[position]= modeloflist
 
         notifyItemChanged(position)

@@ -1,4 +1,4 @@
-package CameraAndGalleryPart
+package com.example.androidpractice.CameraAndGalleryPart
 
 import android.app.Activity
 import android.content.Intent

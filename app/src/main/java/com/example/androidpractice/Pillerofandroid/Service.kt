@@ -1,4 +1,4 @@
-package Pillerofandroid
+package com.example.androidpractice.Pillerofandroid
 
 import android.content.Intent
 import android.os.Build
@@ -29,12 +29,12 @@ class Service : AppCompatActivity() {
             //for bg
 //            startService(Intent(this,loggerservice::class.java))
             //for forground
-            startForegroundService(Intent(this,loggerservice::class.java))
+            startForegroundService(Intent(this, loggerservice::class.java))
         }
 
         binding.endservice.setOnClickListener {
             //for bg and forground
-            stopService(Intent(this,loggerservice::class.java))
+            stopService(Intent(this, loggerservice::class.java))
         }
 
     }

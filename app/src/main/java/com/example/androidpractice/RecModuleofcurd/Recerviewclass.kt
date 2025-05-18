@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidpractice.R
 import com.example.androidpractice.databinding.ActivityRecerviewclassBinding
-import model.adapterdc
+import com.example.androidpractice.model.adapterdc
 
 class Recerviewclass : AppCompatActivity() {
     lateinit var binding: ActivityRecerviewclassBinding

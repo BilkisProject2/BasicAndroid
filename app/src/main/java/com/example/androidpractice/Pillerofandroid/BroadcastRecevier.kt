@@ -1,4 +1,4 @@
-package Pillerofandroid
+package com.example.androidpractice.Pillerofandroid
 
 import android.content.BroadcastReceiver
 import android.content.Context

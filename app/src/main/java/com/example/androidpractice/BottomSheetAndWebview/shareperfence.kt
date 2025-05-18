@@ -1,4 +1,4 @@
-package BottomSheetAndWebview
+package com.example.androidpractice.BottomSheetAndWebview
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/first"
-        android:name="Fragment.first"
+        android:name="com.example.androidpractice.Fragment.first"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
     <fragment
         android:id="@+id/second"
-        android:name="Fragment.second"
+        android:name="com.example.androidpractice.Fragment.second"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
     <fragment
         android:id="@+id/third"
-        android:name="Fragment.third"
+        android:name="com.example.androidpractice.Fragment.third"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
 </navigation>

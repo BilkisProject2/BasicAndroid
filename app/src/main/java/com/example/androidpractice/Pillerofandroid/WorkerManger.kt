@@ -1,4 +1,4 @@
-package Pillerofandroid
+package com.example.androidpractice.Pillerofandroid
 
 import android.os.Bundle
 import android.util.Log

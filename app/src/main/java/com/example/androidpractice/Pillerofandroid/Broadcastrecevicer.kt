@@ -1,4 +1,4 @@
-package Pillerofandroid
+package com.example.androidpractice.Pillerofandroid
 
 import android.content.Intent
 import android.content.IntentFilter
@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.androidpractice.R
 
 class Broadcastrecevicer : AppCompatActivity() {
-    lateinit var mybroadcast :BroadcastRecevier
+    lateinit var mybroadcast : BroadcastRecevier
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        enableEdgeToEdge()
@@ -30,7 +30,7 @@ class Broadcastrecevicer : AppCompatActivity() {
         super.onStart()
         val intentfilter = IntentFilter(Intent.ACTION_TIME_TICK)
         registerReceiver(mybroadcast,intentfilter)
-        val intent = Intent(this,BroadcastRecevier::class.java)
+        val intent = Intent(this, BroadcastRecevier::class.java)
         sendBroadcast(intent)
     }
 

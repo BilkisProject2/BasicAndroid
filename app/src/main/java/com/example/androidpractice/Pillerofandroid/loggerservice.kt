@@ -1,4 +1,4 @@
-package Pillerofandroid
+package com.example.androidpractice.Pillerofandroid
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -61,7 +61,7 @@ class loggerservice:Service() {
     }
 
     fun getpentedndingintet():PendingIntent{
-        val intent = Intent(this,Pillerofandroid.Service::class.java)
+        val intent = Intent(this, com.example.androidpractice.Pillerofandroid.Service::class.java)
         return PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_IMMUTABLE)
     }
 
